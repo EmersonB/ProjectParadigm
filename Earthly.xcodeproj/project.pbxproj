@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		005EE1C5A1EA4AD3C9F8D6F8 /* Pods_Earthly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F081684CC57036C4424A2AF /* Pods_Earthly.framework */; };
 		636CCE851EB668ED00FAE708 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CCE841EB668ED00FAE708 /* ScannerViewController.swift */; };
+		636CCE871EB67D3E00FAE708 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CCE861EB67D3E00FAE708 /* MapViewController.swift */; };
 		639E58E01EB529C6009E2A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58DF1EB529C6009E2A90 /* AppDelegate.swift */; };
 		639E58E21EB529C6009E2A90 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58E11EB529C6009E2A90 /* FirstViewController.swift */; };
 		639E58E41EB529C6009E2A90 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58E31EB529C6009E2A90 /* SecondViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		636CCE841EB668ED00FAE708 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		636CCE861EB67D3E00FAE708 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		639E58DC1EB529C6009E2A90 /* Earthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639E58DF1EB529C6009E2A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639E58E11EB529C6009E2A90 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				639E58E81EB529C6009E2A90 /* Assets.xcassets */,
 				639E58EA1EB529C6009E2A90 /* LaunchScreen.storyboard */,
 				639E58ED1EB529C6009E2A90 /* Info.plist */,
+				636CCE861EB67D3E00FAE708 /* MapViewController.swift */,
 			);
 			path = Earthly;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				639E58E41EB529C6009E2A90 /* SecondViewController.swift in Sources */,
 				639E58E01EB529C6009E2A90 /* AppDelegate.swift in Sources */,
 				639E58E21EB529C6009E2A90 /* FirstViewController.swift in Sources */,
+				636CCE871EB67D3E00FAE708 /* MapViewController.swift in Sources */,
 				636CCE851EB668ED00FAE708 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

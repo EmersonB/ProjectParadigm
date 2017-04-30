@@ -15,7 +15,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.topItem?.title = "Scan Item"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
