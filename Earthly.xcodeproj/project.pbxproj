@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005EE1C5A1EA4AD3C9F8D6F8 /* Pods_Earthly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F081684CC57036C4424A2AF /* Pods_Earthly.framework */; };
+		636CCE851EB668ED00FAE708 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CCE841EB668ED00FAE708 /* ScannerViewController.swift */; };
 		639E58E01EB529C6009E2A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58DF1EB529C6009E2A90 /* AppDelegate.swift */; };
 		639E58E21EB529C6009E2A90 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58E11EB529C6009E2A90 /* FirstViewController.swift */; };
 		639E58E41EB529C6009E2A90 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58E31EB529C6009E2A90 /* SecondViewController.swift */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		636CCE841EB668ED00FAE708 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		639E58DC1EB529C6009E2A90 /* Earthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639E58DF1EB529C6009E2A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639E58E11EB529C6009E2A90 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		639E58FD1EB529C6009E2A90 /* EarthlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639E59011EB529C6009E2A90 /* EarthlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthlyUITests.swift; sourceTree = "<group>"; };
 		639E59031EB529C6009E2A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F081684CC57036C4424A2AF /* Pods_Earthly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Earthly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5764959000114898331350 /* Pods-Earthly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Earthly/Pods-Earthly.release.xcconfig"; sourceTree = "<group>"; };
+		C6861A9A09C8CC0BBE9610F6 /* Pods-Earthly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Earthly/Pods-Earthly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005EE1C5A1EA4AD3C9F8D6F8 /* Pods_Earthly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,8 @@
 				639E58F51EB529C6009E2A90 /* EarthlyTests */,
 				639E59001EB529C6009E2A90 /* EarthlyUITests */,
 				639E58DD1EB529C6009E2A90 /* Products */,
+				8DBF19BED407B1C7AA2BB004 /* Pods */,
+				F7111F1078862D53749F1E29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +108,7 @@
 		639E58DE1EB529C6009E2A90 /* Earthly */ = {
 			isa = PBXGroup;
 			children = (
+				636CCE841EB668ED00FAE708 /* ScannerViewController.swift */,
 				639E58DF1EB529C6009E2A90 /* AppDelegate.swift */,
 				639E58E11EB529C6009E2A90 /* FirstViewController.swift */,
 				639E58E31EB529C6009E2A90 /* SecondViewController.swift */,
@@ -128,6 +138,23 @@
 			path = EarthlyUITests;
 			sourceTree = "<group>";
 		};
+		8DBF19BED407B1C7AA2BB004 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6861A9A09C8CC0BBE9610F6 /* Pods-Earthly.debug.xcconfig */,
+				BF5764959000114898331350 /* Pods-Earthly.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7111F1078862D53749F1E29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F081684CC57036C4424A2AF /* Pods_Earthly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 639E59061EB529C6009E2A90 /* Build configuration list for PBXNativeTarget "Earthly" */;
 			buildPhases = (
+				BD0D94D4954AC1CEA6C3BEE1 /* [CP] Check Pods Manifest.lock */,
 				639E58D81EB529C6009E2A90 /* Sources */,
 				639E58D91EB529C6009E2A90 /* Frameworks */,
 				639E58DA1EB529C6009E2A90 /* Resources */,
+				C5249088C70CE01DFA0B9FDE /* [CP] Embed Pods Frameworks */,
+				64EEB7DF2EB5E4A5D5B1519E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +290,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64EEB7DF2EB5E4A5D5B1519E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Earthly/Pods-Earthly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD0D94D4954AC1CEA6C3BEE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5249088C70CE01DFA0B9FDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Earthly/Pods-Earthly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		639E58D81EB529C6009E2A90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +346,7 @@
 				639E58E41EB529C6009E2A90 /* SecondViewController.swift in Sources */,
 				639E58E01EB529C6009E2A90 /* AppDelegate.swift in Sources */,
 				639E58E21EB529C6009E2A90 /* FirstViewController.swift in Sources */,
+				636CCE851EB668ED00FAE708 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +496,7 @@
 		};
 		639E59071EB529C6009E2A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6861A9A09C8CC0BBE9610F6 /* Pods-Earthly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TEU2P2V67X;
@@ -430,6 +510,7 @@
 		};
 		639E59081EB529C6009E2A90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF5764959000114898331350 /* Pods-Earthly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TEU2P2V67X;
@@ -518,6 +599,7 @@
 				639E59081EB529C6009E2A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639E59091EB529C6009E2A90 /* Build configuration list for PBXNativeTarget "EarthlyTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +608,7 @@
 				639E590B1EB529C6009E2A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639E590C1EB529C6009E2A90 /* Build configuration list for PBXNativeTarget "EarthlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +617,7 @@
 				639E590E1EB529C6009E2A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
