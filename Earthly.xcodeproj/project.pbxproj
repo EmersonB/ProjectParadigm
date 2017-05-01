@@ -18,10 +18,8 @@
 		639E58EC1EB529C6009E2A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639E58EA1EB529C6009E2A90 /* LaunchScreen.storyboard */; };
 		639E58F71EB529C6009E2A90 /* EarthlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E58F61EB529C6009E2A90 /* EarthlyTests.swift */; };
 		639E59021EB529C6009E2A90 /* EarthlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E59011EB529C6009E2A90 /* EarthlyUITests.swift */; };
-		E2DF680F1EB6F265001A1A0B /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF680E1EB6F265001A1A0B /* ThankYouViewController.swift */; };
 		E2DF68111EB6F27C001A1A0B /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF68101EB6F27C001A1A0B /* SignatureViewController.swift */; };
 		E2DF68131EB6F3FB001A1A0B /* PaypalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF68121EB6F3FB001A1A0B /* PaypalViewController.swift */; };
-		E2DF68151EB6F437001A1A0B /* PaymentSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF68141EB6F437001A1A0B /* PaymentSentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +59,8 @@
 		8F081684CC57036C4424A2AF /* Pods_Earthly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Earthly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5764959000114898331350 /* Pods-Earthly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Earthly/Pods-Earthly.release.xcconfig"; sourceTree = "<group>"; };
 		C6861A9A09C8CC0BBE9610F6 /* Pods-Earthly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earthly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Earthly/Pods-Earthly.debug.xcconfig"; sourceTree = "<group>"; };
-		E2DF680E1EB6F265001A1A0B /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		E2DF68101EB6F27C001A1A0B /* SignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		E2DF68121EB6F3FB001A1A0B /* PaypalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalViewController.swift; sourceTree = "<group>"; };
-		E2DF68141EB6F437001A1A0B /* PaymentSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentSentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				636CCE841EB668ED00FAE708 /* ScannerViewController.swift */,
-				E2DF680E1EB6F265001A1A0B /* ThankYouViewController.swift */,
 				E2DF68101EB6F27C001A1A0B /* SignatureViewController.swift */,
 				639E58DF1EB529C6009E2A90 /* AppDelegate.swift */,
 				E2DF68121EB6F3FB001A1A0B /* PaypalViewController.swift */,
-				E2DF68141EB6F437001A1A0B /* PaymentSentViewController.swift */,
 				639E58E11EB529C6009E2A90 /* FirstViewController.swift */,
 				639E58E31EB529C6009E2A90 /* SecondViewController.swift */,
 				639E58E51EB529C6009E2A90 /* Main.storyboard */,
@@ -362,9 +356,7 @@
 				639E58E01EB529C6009E2A90 /* AppDelegate.swift in Sources */,
 				639E58E21EB529C6009E2A90 /* FirstViewController.swift in Sources */,
 				E2DF68131EB6F3FB001A1A0B /* PaypalViewController.swift in Sources */,
-				E2DF680F1EB6F265001A1A0B /* ThankYouViewController.swift in Sources */,
 				E2DF68111EB6F27C001A1A0B /* SignatureViewController.swift in Sources */,
-				E2DF68151EB6F437001A1A0B /* PaymentSentViewController.swift in Sources */,
 				636CCE871EB67D3E00FAE708 /* MapViewController.swift in Sources */,
 				636CCE851EB668ED00FAE708 /* ScannerViewController.swift in Sources */,
 			);
