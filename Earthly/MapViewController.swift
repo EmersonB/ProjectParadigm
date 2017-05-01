@@ -64,8 +64,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 print("Matches found")
                 
                 for item in response!.mapItems {
-                    print("Name = \(item.name)")
-                    print("Phone = \(item.phoneNumber)")
+                    print("Name = \(String(describing: item.name))")
+                    print("Phone = \(String(describing: item.phoneNumber))")
                     
                     self.matchingItems.append(item as MKMapItem)
                     print("Matching items = \(self.matchingItems.count)")
