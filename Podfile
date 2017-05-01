@@ -7,6 +7,6 @@ target 'Earthly' do
 
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
-  # Pods for Earthly 
-
+  # Pods for Earthly
+  pod 'EPSignature'
 end

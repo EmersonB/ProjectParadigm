@@ -10,10 +10,30 @@ import UIKit
 import AVFoundation
 
 var currentUserReward = 0.0
+var currentUserVerifiedReward = 3.61
 let timeBanInHours = 3
+var lastRequestedItem = ""
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var endTim: Date!
-
+    var cur_estimate: Double!
+    @IBAction func estimate(_ sender: Any) {
+        cur_estimate = priceAlgorithm(firstNum: 0.6, secondNum: 1.8)
+        priceEstimate.text = "Price Estimate: " +
+            String(format: "$%.02f", locale: Locale.current, arguments: [cur_estimate])
+    }
+    @IBOutlet weak var priceEstimate: UILabel!
     @IBOutlet weak var rewardButton: UIButton!
     @IBOutlet var recentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -26,10 +46,14 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         Calendar.Component.minute,
         Calendar.Component.second
     ]
+    @IBOutlet weak var estButt: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "Scan Item"
         timeLabel.text = "Eligible for Reward"
+        //if(recentLabel.text == "Press 'Scan Item' to Scan!"){
+          //  estButt.isEnabled = false
+        //}
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,9 +85,11 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: endTim)
         timeLabel.text = "\(time.hour!) Hours \(time.minute!) Minutes \(time.second!) Seconds"
         rewardButton.isEnabled = false
+        estButt.isEnabled = false
         if(time.minute! == 0 && time.second! == 0){
             timeLabel.text = "Eligible for Reward"
             rewardButton.isEnabled = true
+            estButt.isEnabled = true
         }
     }
     
@@ -72,17 +98,19 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     }
     
     @IBAction func redeemButton(_ sender: Any) {
-        if(recentLabel.text != "Press 'Scan Item' to Scan!"){
-            // get the price
-            let price = priceAlgorithm(firstNum: 0.6, secondNum: 1.8)
+        //if(recentLabel.text != "Press 'Scan Item' to Scan!"){
             timeLabel.isEnabled = true
-            currentUserReward += price
-            // start the timer
+            currentUserReward += cur_estimate
             endTim = Date().addingTimeInterval(TimeInterval(timeBanInHours * 60 * 60))
             let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timePrinter), userInfo: nil, repeats: true)
             timer.fire()
             print(currentUserReward)
-            // update rewards dictionary
+        priceEstimate.text = "Price Estimate: n/a"
+        //}
+        if(recentLabel.text == "Press 'Scan Item' to Scan!"){
+            lastRequestedItem = "Water Bottle"
+        } else{
+            lastRequestedItem = recentLabel.text!
         }
     }
 

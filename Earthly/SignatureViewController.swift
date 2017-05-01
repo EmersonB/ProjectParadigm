@@ -12,21 +12,31 @@ import Foundation
 // looks nice and works with CocoaPods
 
 import UIKit
+import EPSignature
 
-class SignatureViewController: UIViewController {
-    
+class SignatureViewController: UIViewController, EPSignatureDelegate {
+    @IBOutlet weak var imgViewSignature: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "Rewards"
-        //call the rewards dictionary and display it
-        // Do any additional setup after loading the view, typically from a nib.
+        self.hideKeyboardWhenTappedAround()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onTouchSignatureButton(sender: AnyObject) {
+        let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
+        
+        signatureVC.subtitleText = "I agree to the terms and conditions"
+        signatureVC.title = "Srinidhi Krishanmurthy"
+        let nav = UINavigationController(rootViewController: signatureVC)
+        present(nav, animated: true, completion: nil)
     }
     
+    func epSignature(_: EPSignatureViewController, didCancel error : NSError) {
+        print("User canceled")
+    }
+    
+    func epSignature(_: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect) {
+        print(signatureImage)
+        imgViewSignature.image = signatureImage
+    }
     
 }
-
