@@ -15,7 +15,7 @@ class PaypalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "Rewards"
+        //self.navigationController?.navigationBar.topItem?.title = "Rewards"
         //call the rewards dictionary and display it
         // Do any additional setup after loading the view, typically from a nib.
     }

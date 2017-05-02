@@ -10,20 +10,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var currentVerifiedLabel: UILabel!
-    @IBOutlet weak var lastRequestedBoshal: UILabel!
-    @IBOutlet weak var currentUnverifiedLabel: UILabel!
+    @IBOutlet var analysisLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "Rewards"
         //call the rewards dictionary and display it
         // Do any additional setup after loading the view, typically from a nib.
-        currentVerifiedLabel.text = "Current Verified Rewards: $" + String(currentUserVerifiedReward)
-        currentUnverifiedLabel.text = "Current Unverified Rewards: " + String(format: "$%.02f", locale: Locale.current, arguments: [currentUserReward])
+//        currentVerifiedLabel.text = "Current Verified Rewards: $" + String(currentUserVerifiedReward)
+//        currentUnverifiedLabel.text = "Current Unverified Rewards: " + String(format: "$%.02f", locale: Locale.current, arguments: [currentUserReward])
 
-        lastRequestedBoshal.text = "Last Recycled Item: " + lastRequestedItem
-
-        
+        let current_credits = UserDefaults.standard.object(forKey: "credits") as? Int
+        if let temp = current_credits{
+            let exchange = String(format: "$%.02f", locale: Locale.current, arguments: [Double(temp) * 0.1])
+            analysisLabel.text = "You have \(temp) credits \n This translates to \(exchange)"
+        }
+        else{
+            analysisLabel.text = "You have no credits. Recycle more to earn some!"
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,8 +26,16 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                               AVMetadataObjectTypePDF417Code,
                               AVMetadataObjectTypeQRCode]
     
+    var items: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let my_items = UserDefaults.standard.object(forKey: "items") as? [String]
+        
+        if let temp = my_items {
+            items = temp
+        }
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
         let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
@@ -110,7 +118,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                     let data = JSON(data: response.data!)
                     print(data)
                     if(data["valid"] == "true"){
-                        UserDefaults.standard.set(data["itemname"].stringValue, forKey: "recent_item")
+                        let current_item = data["itemname"].stringValue
+                        if !self.items.contains(current_item){
+                            self.items.append(current_item)
+                        }
+                        UserDefaults.standard.set(self.items, forKey: "items")
                         self.messageLabel.text = data["itemname"].stringValue
                     }
                     else{

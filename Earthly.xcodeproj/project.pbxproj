@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					639E58DB1EB529C6009E2A90 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = T3667V4FLJ;
+						DevelopmentTeam = TEU2P2V67X;
 						ProvisioningStyle = Automatic;
 					};
 					639E58F11EB529C6009E2A90 = {
@@ -511,8 +511,9 @@
 			baseConfigurationReference = C6861A9A09C8CC0BBE9610F6 /* Pods-Earthly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T3667V4FLJ;
+				DEVELOPMENT_TEAM = TEU2P2V67X;
 				INFOPLIST_FILE = Earthly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Berlik.Earthly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,8 +526,9 @@
 			baseConfigurationReference = BF5764959000114898331350 /* Pods-Earthly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T3667V4FLJ;
+				DEVELOPMENT_TEAM = TEU2P2V67X;
 				INFOPLIST_FILE = Earthly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Berlik.Earthly;
 				PRODUCT_NAME = "$(TARGET_NAME)";

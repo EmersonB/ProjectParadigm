@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewDidLoad()
 
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "Nearby Recycling Centers"
+        //self.navigationController?.navigationBar.topItem?.title = "Nearby Recycling Centers"
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.requestWhenInUseAuthorization()
