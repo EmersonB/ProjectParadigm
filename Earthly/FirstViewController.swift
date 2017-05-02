@@ -62,6 +62,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             table.reloadData()
         }
         
+        print(items)
         creditsLabel.text = "🌳Credits: \(items.count) 🌳"
     }
 

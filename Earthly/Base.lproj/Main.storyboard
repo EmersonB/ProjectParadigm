@@ -410,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="381.85907046476763"/>
         </scene>
-        <!--View Controller-->
+        <!--Redeem View Controller-->
         <scene sceneID="hFD-ie-t5S">
             <objects>
-                <viewController id="IF2-m5-ezF" sceneMemberID="viewController">
+                <viewController id="IF2-m5-ezF" customClass="RedeemViewController" customModule="Earthly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jew-dm-NyK"/>
                         <viewControllerLayoutGuide type="bottom" id="aqQ-ee-6go"/>
@@ -475,7 +475,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tBG-8d-ffi">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="uC8-qY-q7X"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="uC8-qY-q7X">
+                            <connections>
+                                <action selector="doneOnPress:" destination="IF2-m5-ezF" id="YcR-N4-nVx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWh-pF-OIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
